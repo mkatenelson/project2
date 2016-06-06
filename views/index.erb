@@ -1,8 +1,8 @@
 <ul>
 <% @drinks.each do |drink| %>
   <li>
-    <p><strong>"<%= drink.name %>"</strong>,
-    by <%= drink.ingredients %></p>
+    <p><strong><%= drink.name %></strong><br>
+    <%= drink.ingredients %></p>
   </li>
 <% end %>
 </ul>
