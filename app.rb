@@ -1,25 +1,17 @@
 class DrinksApp < Sinatra::Base
 
-  #ROOT ROUTE
+  #INDEX
   get "/" do
     @drinks = Drink.all
-    p "Drinks from controller:"
-    p @drinks
-    #p "***"
-    erb :index
+    erb :"index"
   end
 
-  #INDEX
-  # get "/drinks" do
-  #   @drinks = Drink.all
-  #   erb :"index"
-  # end
-
-  #GET BY ID
+  #SHOW
   get '/drinks/:id' do
     @drinks = Drink.all
-    @drinks = Drink.find(params[:id])
-    @drink.name
+    @drink = Drink.find(params[:id])
+    p @drink.name
+    erb :show
   end
 
   #NEW
@@ -35,11 +27,6 @@ class DrinksApp < Sinatra::Base
     redirect "/"
   end
 
-  #SHOW
-  get '/drinks/show/:id' do
-     @drink = Drink.find(params[:id])
-     erb :show
-  end
 
     #EDIT
     #get '/drinks/:id/edit' do
@@ -48,10 +35,12 @@ class DrinksApp < Sinatra::Base
     #end
 
   #UPDATE
-  get "drinks/:id" do
+  put "drinks/:id" do
     @drinks = Drink.all
     @drink = Drink.find(params[:id])
     @drink.name
+    @drink.save
+    redirect "/"
   end
 
   #DESTROY

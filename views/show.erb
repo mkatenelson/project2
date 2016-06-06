@@ -1,8 +1,15 @@
-<%= @drink.name %>
+<strong><%= @drink.name %></strong><br>
 <%= @drink.ingredients %>
 
-
-<form action="/drinks/<%= @drink.id %>" method="post" class='delete'>
-  <input type="hidden" name="_method" value="delete">
-  <input type='submit' value="Delete">
+<h1>Add New Recipe</h1>
+<form method="POST" action="/drink">
+ Name: <br>
+ <input type="text" name="drink[name]" value=" Name"><br>
+ Specialty: <br>
+ <input type="text" name="drink[ingredients]"
+ value="Ingredients"><br>
+ Image: <br>
+ <input type="text" name="drink[image]"
+ value="Image (url only)"><br>
+ <input type="submit" value="Submit">
 </form>

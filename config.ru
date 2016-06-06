@@ -2,7 +2,10 @@ require "rubygems"
 require "bundler"
 Bundler.require
 
+#models
 require "./models/drink"
+
+#controllers
 require "./app"
 
 run DrinksApp
