@@ -1,0 +1,11 @@
+<h2>Update Recipe</h2>
+
+<form action='/drinks/<%= "#{@drink.id}" %>' method="post">
+  <label for="drink[name]">Name:</label>
+  <input name="drink[name]" value='<%= "#{@drink.name}" %>'>
+
+  <label for="drink[ingredients]">Ingredients:</label>
+  <input name="drink[ingredients]" value='<%= "#{@drink.ingredients}" %>'>
+
+  <input type="submit" value="Create">
+</form>

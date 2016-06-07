@@ -7,7 +7,7 @@
 
 <%# UPDATE FORM %>
 <h3>Update Recipe</h3>
-<form action="/drinks/<%= '#{@drink.id}' %>" method="post" class='update'>
+<form action="/drinks/<%= '@drink.id' %>" method="post" class='update'>
   <label for="drink[name]">Drink:</label>
   <input name="drink[name]" value="Name"
   >
@@ -22,5 +22,5 @@
 <%# DELETE BUTTON %>
 <form action="/drinks/<%= @drink.id %>" method="post" class='delete'>
   <input type="hidden" name="_method" value="delete">
-  <input type='submit' value="Delete Completely">
+  <input type='submit' value="Delete Recipe">
 </form>
