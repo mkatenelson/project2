@@ -1,8 +1,15 @@
-<ul>
-<% @drinks.each do |drink| %>
-  <li>
-    <p><strong><%= drink.name %></strong><br>
-    <%= drink.ingredients %></p>
-  </li>
-<% end %>
-</ul>
+<%# DRINK LIST %>
+<div class="drinks">
+  <% @drinks.each do |drink| %>
+    <ul>
+      <li>
+        <h2><a href="/drinks/<%= drink.id %>">
+            <%= drink.name %></a>
+        </h2>
+      </li>
+    </ul>
+  <% end %>
+</div>
+
+<%# NEW RECIPE BUTTON %>
+<a class="btn" href="/new">Add Recipe</a>

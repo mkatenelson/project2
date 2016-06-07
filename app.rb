@@ -15,7 +15,7 @@ class DrinksApp < Sinatra::Base
   end
 
   #NEW
-  get "/drinks/new" do
+  get "/new" do
     erb :new
   end
 
