@@ -3,13 +3,14 @@
   <% @drinks.each do |drink| %>
     <ul>
       <li>
-        <h2><a href="/drinks/<%= drink.id %>">
+        <h2><a class"index" href="/drinks/<%= drink.id %>">
             <%= drink.name %></a>
         </h2>
       </li>
     </ul>
   <% end %>
 </div>
+<br>
 
 <%# NEW RECIPE LINK%>
-<a class="btn" href="/new">Add Recipe</a>
+<a class="link" href="/new">Add Recipe</a>
