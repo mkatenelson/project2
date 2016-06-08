@@ -1,26 +1,27 @@
 <%# RECIPE BY ID %>
 <h2><%= @drink.name %></h2>
 <p>Ingredients: <%= @drink.ingredients %><br>
-<a href="/">Back to List</a>
+<a href="/">Back to Drink List</a>
 <p>
 <br>
 
 <%# UPDATE FORM %>
 <h3>Update Recipe</h3>
-<form action="/drinks/<%= '@drink.id' %>" method="post" class='update'>
-  <label for="drink[name]">Drink:</label>
-  <input name="drink[name]" value="Name"
+<form action='/drinks/<%= "#{@drink.id}" %>' method="post">
+  <label for="drink[name]">Name:</label>
+  <input name="drink[name]" value=""
   >
   <br>
   <label for="drink[ingredients]">Ingredients:</label>
-  <input name="drink[ingredients]" value="Ingredients"
+  <input name="drink[ingredients]" value=""
   ><br>
   <input type="submit" value="Update">
 </form>
 <br>
 
+
 <%# DELETE BUTTON %>
-<form action="/drinks/<%= @drink.id %>" method="post" class='delete'>
-  <input type="hidden" name="_method" value="delete">
-  <input type='submit' value="Delete Recipe">
+<form action="/drinks/<%= @drink.id %>" method="post">
+ <input type="hidden" name="_method" value="DELETE"/>
+ <input type="submit" value="Delete"/>
 </form>

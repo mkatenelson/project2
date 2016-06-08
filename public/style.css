@@ -1,0 +1,13 @@
+input[type=submit],
+.btn {
+  background: #d8e1e5;
+  border: none;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 305px;
+  color: #535454;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
+}

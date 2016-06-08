@@ -7,5 +7,6 @@ require "./models/drink"
 
 #controllers
 require "./app"
+use Rack::MethodOverride
 
 run DrinksApp

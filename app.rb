@@ -31,29 +31,28 @@ class DrinksApp < Sinatra::Base
   end
 
     #EDIT
-    #get '/drinks/:id/edit' do
-      #erb :edit
-      #Would direct to "edit" page. Create edit form/functionality on the "show" page instead.
-    #end
-  #
-  # #UPDATE
-  # put '/drinks/:id' do
-  #   @drink = Drink.find(params[:id])
-  #   if @drink.update_attributes(params[:drink])
-  #     redirect("/drinks/#{drink.id}")
-  #   else
-  #     erb(:"drinks/edit")
-  #   end
-  # end
+    get '/drinks/:id/edit' do
+      @drink = Drink.find(params[:id])
+      erb :edit
+    end
 
-  #DESTROY
-  post '/drinks/:id/' do
+  #UPDATE
+  post "/drinks/:id" do
     @drink = Drink.find(params[:id])
-    if @drink.destroy
-      redirect('/drinks')
-    else
+    if @drink.update_attributes(params[:drink])
       redirect("/drinks/#{@drink.id}")
+    else
+      erb :edit
     end
   end
+
+  #DESTROY
+  delete "/drinks/:id" do
+          @drink = Drink.find(params[:id])
+          @drink.destroy
+          redirect "/"
+
+   end
+
 
 end
