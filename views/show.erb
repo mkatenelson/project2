@@ -1,27 +1,39 @@
 <%# RECIPE BY ID %>
 <h2><%= @drink.name %></h2>
 <p>Ingredients: <%= @drink.ingredients %><br>
-<a href="/">Back to Drink List</a>
+
 <p>
 <br>
 
 <%# UPDATE FORM %>
 <h3>Update Recipe</h3>
-<form action='/drinks/<%= "#{@drink.id}" %>' method="post">
-  <label for="drink[name]">Name:</label>
-  <input name="drink[name]" value=""
+<form action='/drinks/<%= "#{@drink.id}" %>' method="post" class="form">
+  Name: <br>
+  <input type="text" name="drink[name]" value=""
   >
   <br>
-  <label for="drink[ingredients]">Ingredients:</label>
-  <input name="drink[ingredients]" value=""
+  Ingredients: <br>
+  <input type="text" name="drink[ingredients]" value=""
   ><br>
   <input type="submit" value="Update">
 </form>
-<br>
 
 
-<%# DELETE BUTTON %>
-<form action="/drinks/<%= @drink.id %>" method="post">
- <input type="hidden" name="_method" value="DELETE"/>
- <input type="submit" value="Delete"/>
-</form>
+
+<table>
+  <tr>
+    <td> <%# DELETE BUTTON %>
+      <form action="/drinks/<%= @drink.id %>" method="post" class="link">
+        <input type="hidden" name="_method" value="delete"/>
+        <input type="submit" value="Delete From List"/>
+      </form>
+    </td>
+    <td><%# NEW RECIPE LINK%>
+      <form method="link" action="/">
+        <input type="submit" value="Back to Drink List">
+      </form>
+    </td>
+  </tr>
+</table>
+
+<!-- <a href="/" class="link">Back to Drink List</a> -->

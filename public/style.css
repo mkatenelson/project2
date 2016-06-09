@@ -3,6 +3,7 @@ html{
   min-height: 100%;
 }
 body {
+  color: white;
   min-height: 100%;
   overflow: hidden;
   margin: 0px;
@@ -15,25 +16,84 @@ body {
     background-color: black;
 }
 h1 {
-  font-family: "Merriweather Sans";
-	font-size: 50px;
-  color: white;
-  margin: 30px 20px;
+  font-family: "Dancing Script", cursive;
+	 font-size: 60px;
+   color: white;
+  margin: 30px 50px 15px 50px;
 }
-ul {
+h2 {
+  margin: 0 50px 5px 50px;
   font-family: "Roboto";
-  font-size: 18px;
-  color: white;
+    font-weight: 400;
+    font-size: 45px;
+    color: #FF9C05;
+}
+h3 {
+  margin: 0 50px 10px 50px;
+  font-family: "Roboto";
+    font-weight: 400;
+    font-size: 30px;
+}
+p {
+  width: 500px;
+  margin: 0px 50px 10px 50px;
+  font-family: Roboto;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 36px;
+}
+form {
+  margin: 0 50px;
+  font-family: Roboto;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+}
+input[type=submit] {
+    padding:5px 15px;
+    background: #FF9C05;
+    border:0 none;
+      border-radius: 2px;
+    font-family: Roboto;
+      font-size: 18px;
+      font-weight: 700;
+    margin: 10px 0px 0px 0px;
+}
+input[type=text] {
+    padding: 5px 15px;
+    background: white;
+    border:0 none;
+      border-radius: 2px;
+    /*font-family: Roboto;
+      font-weight: 700;*/
+      font-size: 20px;
+    margin: 5px 0px 10px 0px;
+}
+input[type=text]:focus {
+    border: 3px solid #FF9C05;
+}
+table {
+  margin-top: 50px;
+  width: 300px;
 }
 
 ///CLASSES
+.drinks {
+  padding: 0px 0px 20px 0px;
+}
 .index {
-  /////
+  font-family: "Roboto";
+    font-weight: 400;
+    font-size: 30px;
+    text-indent: -4px;
+    color: white;
+  margin: 15px 30px;
 }
 .link {
+  margin: 15px 50px;
   font-family: "Roboto";
-  font-size: 18px;
-  color: white;
-  margin: 30px 20px;
-  padding: 15px 0 0 0;
+    font-weight: 400;
+    font-size: 20px;
+    color: #FF9C05;
+  width: 100px; 
 }

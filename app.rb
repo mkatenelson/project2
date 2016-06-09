@@ -48,11 +48,9 @@ class DrinksApp < Sinatra::Base
 
   #DESTROY
   delete "/drinks/:id" do
-          @drink = Drink.find(params[:id])
-          @drink.destroy
-          redirect "/"
-
-   end
-
+    @drink = Drink.find(params[:id])
+    @drink.destroy
+    redirect "/"
+  end
 
 end
