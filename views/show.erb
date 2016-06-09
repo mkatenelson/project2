@@ -1,7 +1,7 @@
 <%# RECIPE BY ID %>
 <h2><%= @drink.name %></h2>
 <p>Ingredients: <%= @drink.ingredients %><br>
-
+<img src="<%= @drink.photo_url %>">
 <p>
 <br>
 
@@ -15,9 +15,11 @@
   Ingredients: <br>
   <input type="text" name="drink[ingredients]" value=""
   ><br>
+  Image URL: <br>
+  <input type="text" name="drink[photo_url]" value=""
+  ><br>
   <input type="submit" value="Update">
 </form>
-
 
 
 <table>
@@ -25,15 +27,13 @@
     <td> <%# DELETE BUTTON %>
       <form action="/drinks/<%= @drink.id %>" method="post" class="link">
         <input type="hidden" name="_method" value="delete"/>
-        <input type="submit" value="Delete From List"/>
+        <input type="submit" value="Delete Recipe"/>
       </form>
     </td>
-    <td><%# NEW RECIPE LINK%>
+    <td><%# RETURN HOME BUTTON%>
       <form method="link" action="/">
         <input type="submit" value="Back to Drink List">
       </form>
     </td>
   </tr>
 </table>
-
-<!-- <a href="/" class="link">Back to Drink List</a> -->
