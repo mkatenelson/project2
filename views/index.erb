@@ -1,17 +1,19 @@
-<%# DRINK LIST %>
-<div class="drinks">
-  <ul>
-    <% @drinks.each do |drink| %>
-      <li class="index">
-          <a class="index" href="/drinks/<%= drink.id %>" >
-            <%= drink.name %></a>
-      </li>
-    <% end %>
-  </ul>
-</div>
-<br>
+<div class="page-wrapper index-page">
+  <%# DRINK LIST %>
+  <div class="drinks">
+    <ul>
+      <% @drinks.each do |drink| %>
+        <li class="index">
+            <a class="index" href="/drinks/<%= drink.id %>" >
+              <%= drink.name %></a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <br>
 
-<%# NEW RECIPE LINK%>
-<form method="link" action="/new">
-  <input type="submit" value="ADD A RECIPE">
-</form>
+  <%# NEW RECIPE LINK%>
+  <form method="link" action="/new">
+    <input type="submit" value="ADD A RECIPE">
+  </form>
+</div>

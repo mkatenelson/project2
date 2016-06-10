@@ -1,17 +1,16 @@
 <div class="page-wrapper show-page">
 
 <%# RECIPE BY ID %>
-<table class="show">
+<table>
   <tr>
-    <td class="showtd">
+    <td>
       <h2><%= @drink.name %></h2>
         <p>
           <img src="<%= @drink.photo_url %>">
-          Ingredients: <%= @drink.ingredients %>
-        <p><br>
-      <br>
+          <h3>Ingredients: <%= @drink.ingredients %></h3>
+        <p>
     </td>
-    <td class="showtd"><%# UPDATE FORM %>
+    <td valign="top"><%# UPDATE FORM %>
       <h3>Update Recipe</h3>
       <form action='/drinks/<%= "#{@drink.id}" %>' method="post" class="form">
         Name: <br>
@@ -31,18 +30,13 @@
 </table>
 
 
-<table>
-  <tr>
-    <td> <%# DELETE BUTTON %>
-      <form action="/drinks/<%= @drink.id %>" method="post" class="link">
-        <input type="hidden" name="_method" value="delete"/>
-        <input type="submit" value="Delete Recipe"/>
-      </form>
-    </td>
-    <td><%# RETURN HOME BUTTON%>
-      <form method="link" action="/">
-        <input type="submit" value="Back to Drink List">
-      </form>
-    </td>
-  </tr>
-</table>
+<%# DELETE BUTTON %>
+<form action="/drinks/<%= @drink.id %>" method="post" class="link">
+  <input type="hidden" name="_method" value="delete"/>
+  <input type="submit" value="Delete Recipe"/>
+</form>
+
+<%# RETURN BUTTON %>
+<form method="link" action="/" class="return">
+  <input type="submit" value="Back to Drink List">
+</form>
