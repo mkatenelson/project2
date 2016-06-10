@@ -22,23 +22,23 @@ h1 {
   margin: 30px 50px 0px 50px;
 }
 h2 {
-  margin: 0 50px 0px 50px;
+  margin: 0px 50px 0px 50px;
   font-family: "Roboto";
     font-weight: 400;
     font-size: 35px;
     color: #FF9C05;
 }
 h3 {
-  margin: 0 50px 10px 50px;
+  margin: 0px 50px 10px 50px;
   font-family: "Roboto";
     font-weight: 400;
     font-size: 24px;
 }
 img {
   display: block;
-  width: 50%;
-  height: 150px;
-  margin: 5px 0px 0px 0px;
+  max-width: 50%;
+  min-height: 25%;
+  margin: 5px 0px 15px 0px;
   border: 0 none;
     border-radius: 4px;
 }
@@ -84,6 +84,9 @@ input[type=text] {
 }*/
 
 ///CLASSES
+.show {
+  margin: 100px 50px 0px 48px;
+}
 .drinks {
   padding: 0px 0px 20px 0px;
 }
@@ -105,4 +108,7 @@ input[type=text] {
 }
 .return{
   margin: 60px 0px 0px 50px;
+}
+.page-wrapper.index-page {
+
 }

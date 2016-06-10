@@ -1,25 +1,34 @@
-<%# RECIPE BY ID %>
-<h2><%= @drink.name %></h2>
-<p>Ingredients: <%= @drink.ingredients %><br>
-<img src="<%= @drink.photo_url %>">
-<p>
-<br>
+<div class="page-wrapper show-page">
 
-<%# UPDATE FORM %>
-<h3>Update Recipe</h3>
-<form action='/drinks/<%= "#{@drink.id}" %>' method="post" class="form">
-  Name: <br>
-  <input type="text" name="drink[name]" value=""
-  >
-  <br>
-  Ingredients: <br>
-  <input type="text" name="drink[ingredients]" value=""
-  ><br>
-  Image URL: <br>
-  <input type="text" name="drink[photo_url]" value=""
-  ><br>
-  <input type="submit" value="Update">
-</form>
+<%# RECIPE BY ID %>
+<table class="show">
+  <tr>
+    <td class="showtd">
+      <h2><%= @drink.name %></h2>
+        <p>
+          <img src="<%= @drink.photo_url %>">
+          Ingredients: <%= @drink.ingredients %>
+        <p><br>
+      <br>
+    </td>
+    <td class="showtd"><%# UPDATE FORM %>
+      <h3>Update Recipe</h3>
+      <form action='/drinks/<%= "#{@drink.id}" %>' method="post" class="form">
+        Name: <br>
+        <input type="text" name="drink[name]" value=""
+        >
+        <br>
+        Ingredients: <br>
+        <input type="text" name="drink[ingredients]" value=""
+        ><br>
+        Image URL: <br>
+        <input type="text" name="drink[photo_url]" value=""
+        ><br>
+        <input type="submit" value="Update">
+      </form>
+    </td>
+  <tr>
+</table>
 
 
 <table>
